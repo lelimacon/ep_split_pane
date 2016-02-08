@@ -1,0 +1,146 @@
+
+<script type="text/javascript" src="https://raw.githubusercontent.com/nathancahill/Split.js/master/split.min.js"></script>
+
+<div id="rightpanebox" class="split">
+  <div id="rightpane">
+    <div id="rightpaneContent">
+    </div>
+  </div>
+</div>
+
+<style>
+
+/*
+ * GLOBAL FIXES
+ */
+
+html, body
+{
+  height: 100%;
+}
+
+/*
+ * SPLIT STYLE
+ */
+
+.gutter
+{
+  background-color: #f8f8f8;
+}
+.gutter.gutter-horizontal
+{
+  cursor: ew-resize;
+}
+
+.gutter.gutter-vertical
+{
+  cursor: ns-resize;
+}
+
+.split
+{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.split, .gutter.gutter-horizontal
+{
+  position: static;
+  height: calc(100% - 38px);
+  float: left;
+}
+
+/*
+ * LEFT PANE FIXES
+ */
+
+#editorcontainerbox
+{
+  position: static;
+  overflow: hidden;
+}
+#editorcontainer
+{
+  position: static;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+}
+#editorcontainer iframe
+{
+  position: static;
+  overflow: hidden;
+}
+#editorcontainer iframe html,
+#editorcontainer iframe html body,
+#outerdocbody
+{
+  overflow: hidden;
+}
+
+/*
+ * RIGHT PANE
+ */
+
+#rightpanebox
+{
+  overflow: auto;
+}
+#rightpane
+{
+  min-width: calc(100% - 41px);
+  min-height: calc(100% - 40px);
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+#rightpaneContent
+{
+  width: 100%;
+}
+
+/*
+ * RESPONSIVE RIGHT PANEL
+ */
+
+@media screen and (max-width: 600px)
+{
+  #rightpanebox
+  {
+    display: none;
+  }
+  .split
+  {
+    display: none;
+  }
+}
+
+/*
+ * PRINTING
+ */
+
+@media print
+{
+  body *
+  {
+    display: none;
+    visibility: hidden;
+  }
+  #rightpanebox,
+  #rightpanebox *
+  {
+    display: block;
+    visibility: visible;
+    border: none;
+  }
+  #rightpane
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+</style>

@@ -1,0 +1,13 @@
+{
+  "parts": [
+    {
+      "name": "main",
+      "client_hooks": {
+        "aceInitialized": "ep_split_pane/static/js/index"
+      },
+      "hooks": {
+        "eejsBlock_afterEditbar": "ep_split_pane/index"
+      }
+    }
+  ]
+}

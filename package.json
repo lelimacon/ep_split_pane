@@ -1,0 +1,14 @@
+{
+  "description": "Adds a right panel that can typically be used for rendering",
+  "name": "ep_split_pane",
+  "version": "0.0.1",
+  "author": {
+    "name": "lelimacon",
+    "email": "lelimacon@users.noreply.github.com"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": "*"
+  }
+}
